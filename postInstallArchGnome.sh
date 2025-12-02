@@ -19,8 +19,15 @@ packagesToInstallPacman=(
     base-devel
     gnome-browser-connector
     exfatprogs
+    ttf-dejavu 
+    ttf-liberation 
+    noto-fonts 
+    noto-fonts-emoji 
+    noto-fonts-cjk 
+    noto-fonts-extra
 )
 sudo pacman -S --noconfirm "${packagesToInstallPacman[@]}"
+fc-cache -fv
 
 #To remove:
 echo "Removing: ${packagesToRemovePacman[*]}"
