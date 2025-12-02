@@ -27,6 +27,7 @@ packagesToInstallPacman=(
     noto-fonts-extra
 )
 sudo pacman -S --noconfirm "${packagesToInstallPacman[@]}"
+
 fc-cache -fv
 
 #To remove:
@@ -88,6 +89,8 @@ packagesToInstallYay=(
     visual-studio-code-bin
 )
 yay -S --noconfirm "${packagesToInstallYay[@]}"
+
+sudo pacman -Syu --noconfirm && yay -Syu --noconfirm
 
 #Adding UA language in system
 set -e
