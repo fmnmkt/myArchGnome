@@ -36,19 +36,26 @@ fc-cache -fv
 chsh -s /usr/bin/fish
 set -U fish_greeting
 
+#Build AUR packages
+cd Downloads
+git clone https://aur.archlinux.org/google-chrome.git
+cd google-chrome
+makepkg -si --noconfirm
+cd ..
+
 #To remove:
 echo "Removing: ${packagesToRemovePacman[*]}"
 packagesToRemovePacman=(
-    epiphany 
     vim
+    epiphany
     simple-scan 
     snapshot
     papers
-    baobab
     evince
     malcontent
     yelp 
-    sushi 
+    sushi
+    gnome-disk-utility
     gnome-user-docs
     gnome-contacts 
     gnome-clocks
@@ -60,6 +67,7 @@ packagesToRemovePacman=(
     gnome-connections
     gnome-tour
     gnome-logs
+    gnome-system-monitor
 )
 
 # Filter only installed packages
@@ -78,16 +86,7 @@ else
   echo "No matching packages installed."
 fi
 
-#Packages install by AUR
-# packagesToInstallYay=(
-#     google-chrome
-#     neofetch
-#     menulibre
-#     adw-gtk3
-#     steam
-#     visual-studio-code-bin
-# )
-
+#Removing usr
 sudo pacman -Syu --noconfirm && sudo pacman -Sc --noconfirm && sudo pacman -Rs $(pacman -Qdtq) --noconfirm
 
 #Adding UA language in system
