@@ -27,14 +27,10 @@ packagesToInstallPacman=(
     noto-fonts-emoji 
     noto-fonts-cjk 
     noto-fonts-extra
-    fish
 )
 sudo pacman -S --noconfirm "${packagesToInstallPacman[@]}"
 
 fc-cache -fv
-
-chsh -s /usr/bin/fish
-set -U fish_greeting
 
 #Build AUR packages
 cd Downloads
