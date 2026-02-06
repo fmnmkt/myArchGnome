@@ -68,6 +68,7 @@ packagesToRemovePacman=(
     gnome-tour
     gnome-logs
     gnome-system-monitor
+    gnome-console
 )
 
 # Filter only installed packages
