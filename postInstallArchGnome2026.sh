@@ -27,6 +27,7 @@ packagesToInstallPacman=(
     noto-fonts-emoji 
     noto-fonts-cjk 
     noto-fonts-extra
+    steam
 )
 sudo pacman -S --noconfirm "${packagesToInstallPacman[@]}"
 
@@ -51,6 +52,11 @@ cd ..
 
 git clone https://aur.archlinux.org/mission-center.git
 cd mission-center
+makepkg -si --noconfirm
+cd ..
+
+git clone https://aur.archlinux.org/gnome-shell-extension-dash-to-dock.git
+cd gnome-shell-extension-dash-to-dock
 makepkg -si --noconfirm
 cd ..
 
