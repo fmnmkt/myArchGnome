@@ -39,6 +39,21 @@ cd google-chrome
 makepkg -si --noconfirm
 cd ..
 
+git clone https://aur.archlinux.org/menulibre.git
+cd menulibre
+makepkg -si --noconfirm
+cd ..
+
+git clone https://aur.archlinux.org/neofetch.git
+cd neofetch
+makepkg -si --noconfirm
+cd ..
+
+git clone https://aur.archlinux.org/mission-center.git
+cd mission-center
+makepkg -si --noconfirm
+cd ..
+
 #To remove:
 echo "Removing: ${packagesToRemovePacman[*]}"
 packagesToRemovePacman=(
