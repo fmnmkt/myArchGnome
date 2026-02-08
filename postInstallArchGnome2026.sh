@@ -28,6 +28,7 @@ packagesToInstallPacman=(
     noto-fonts-cjk 
     noto-fonts-extra
     steam
+    adw-gtk-theme
 )
 sudo pacman -S --noconfirm "${packagesToInstallPacman[@]}"
 
@@ -47,6 +48,7 @@ cd ..
 
 git clone https://aur.archlinux.org/neofetch.git
 cd neofetch
+gpg --recv-keys 46D62DD9F1DE636E
 makepkg -si --noconfirm
 cd ..
 
@@ -55,9 +57,11 @@ cd mission-center
 makepkg -si --noconfirm
 cd ..
 
+#GNOME Shekk Extensions
 git clone https://aur.archlinux.org/gnome-shell-extension-dash-to-dock.git
 cd gnome-shell-extension-dash-to-dock
 makepkg -si --noconfirm
+gnome-extensions enable dash-to-dock@micxgx.gmail.com
 cd ..
 
 #To remove:
