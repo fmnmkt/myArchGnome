@@ -76,6 +76,7 @@ packagesToRemovePacman=(
     malcontent
     yelp 
     sushi
+    nm-connection-editor
     gnome-disk-utility
     gnome-user-docs
     gnome-contacts 
@@ -91,6 +92,22 @@ packagesToRemovePacman=(
     gnome-system-monitor
     gnome-console
 )
+
+#Remove /usr/bin software
+sudo rm -f /usr/bin/bssh
+sudo rm -f /usr/bin/bvnc
+sudo rm -f /usr/bin/avahi-discover
+sudo rm -f /usr/bin/qv4l2
+sudo rm -f /usr/bin/qvidcap
+
+#Remove menu Gnome menu entries
+sudo rm -f /usr/share/applications/bssh.desktop
+sudo rm -f /usr/share/applications/bvnc.desktop
+sudo rm -f /usr/share/applications/avahi-discover.desktopsu
+sudo rm -f /usr/share/applications/qv4l2.desktop
+sudo rm -f /usr/share/applications/qvidcap.desktop
+sudo rm -f /usr/share/applications/htop.desktop
+sudo rm -f /usr/share/applications/nvtop.desktop
 
 # Filter only installed packages
 installed=()
