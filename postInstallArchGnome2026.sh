@@ -77,6 +77,7 @@ packagesToRemovePacman=(
     yelp 
     sushi
     nm-connection-editor
+    network-manager-applet
     gnome-disk-utility
     gnome-user-docs
     gnome-contacts 
